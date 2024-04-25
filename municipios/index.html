@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Municipios</title>
+    <link rel="stylesheet" href="../main.css">
 </head>
 <body>
-    
+    <div class="grid-container">
+        <header>
+            <h1>Municípios de <span id="estado"></span></h1>
+            <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../favoritos/index.html">Favoritos</a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+            <ul id="municipios-lista"></ul>
+            <h2>Aperte F5 para carregar os Municipios</h2>
+        </main>
+        <footer>
+            © 2024 Prova de Programação Web
+        </footer>
+    </div>
+
+    <script src="../main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            limparCache();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const estado = urlParams.get('estado');
+            if (estado) {
+                fetchMunicipios(estado);
+            }
+        });
+
+        function limparCache() {
+            localStorage.clear();
+        }
+    </script>
 </body>
 </html>
