@@ -1,5 +1,4 @@
-
-    Documentação do Código:
+   Documentação do Código:
 1. Estrutura da Página (2 pontos)
 Utilize a seguinte estrutura de projeto, onde a Home ficará no index.html e as outras páginas ficarão em pastas separadas, também com index.html: Página principal: ./index.html; Página de municípios: ./municipios/index.html; Página de favoritos: ./favoritos/index.html (0.5 ponto)
 Utilize uma grid para organizar o conteúdo da página, onde o conteúdo principal (main) ocupa a maior parte do espaço. (1 pontos)
